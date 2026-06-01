@@ -1,2 +1,2 @@
 # my-website
-My First Website
+“Tech, creativity & ideas.”
