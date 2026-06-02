@@ -1,57 +1,118 @@
-
-<head><!DOCTYPE html><html>
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 <head>
-<title>Germany Top IT</title>
-</he<link rel="icon" type="image/png" href="Your-paragraph-text.png">ad><
-margin:0;
-background-image:url('4k-new-york.jpg');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-font-family:Arial,sans-serif;
-"><!-- LOGO --><div style="text-align:center;padding-top:30px;"><img src="Your-paragraph-text.png"
-width="120"
-height="120"
-style="
-border-radius:50%;
-object-fit:cover;
-border:3px solid white;
-">
+  <title>My Website</title>
 
-<h1 style="
-color:white;
-margin-top:15px;
-font-weight:bold;
-">
-Germany Top IT
-</h1></div><!-- Verified USA Accounts for Business Growth --><div style="
-background:white;
-color:black;
-text-align:center;
-font-weight:bold;
-font-size:22px;
-padding:15px; 
-margin:20px;
-border-radius:8px;
-">Verified USA Accounts for Business Growth
+  <!-- 🔥 Tab logo -->
+  <link rel="icon" href="Your-paragraph-text.png">
 
-</div><!-- MENU BAR --><div style="
-background:white;
-color:black;
-text-align:center;
-font-weight:bold;
-font-size:18px;
-padding:15px;
-margin:20px;
-border-radius:8px;
-">  
-Bank Accounts    |   
-Crypto Accounts    |   
-Social Media Accounts    |   
-Email Addresses   |  
- 
- Review     |
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: url("background.jpg") no-repeat center center/cover;
+    }
 
-</div></body>
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      min-height: 100vh;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    /* Logo + name */
+    .header img {
+      width: 90px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .header h2 {
+      margin: 10px 0;
+    }
+
+    /* Categories */
+    .menu {
+      margin-top: 20px;
+    }
+
+    .menu button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: 1px solid white;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .menu button:hover {
+      background: white;
+      color: black;
+    }
+
+    /* Content box */
+    .box {
+      display: none;
+      background: white;
+      color: black;
+      width: 280px;
+      margin: 20px auto;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <!-- 🔥 Logo + Name -->
+  <div class="header">
+    <img src="Your-paragraph-text.png">
+    <h2>My Website Name</h2>
+  </div>
+
+  <!-- 🔥 Categories -->
+  <div class="menu">
+    <button onclick="show('social')">Social</button>
+    <button onclick="show('female')">Female</button>
+    <button onclick="show('tiktok')">TikTok</button>
+    <button onclick="show('all')">All</button>
+  </div>
+
+  <!-- 🔥 Content -->
+  <div id="social" class="box">
+    <p>Social Account 1</p>
+    <p>Social Account 2</p>
+  </div>
+
+  <div id="female" class="box">
+    <p>Female Account 1</p>
+    <p>Female Account 2</p>
+  </div>
+
+  <div id="tiktok" class="box">
+    <p>TikTok Account 1</p>
+    <p>TikTok Account 2</p>
+  </div>
+
+</div>
+
+<script>
+function show(id){
+  let boxes = document.querySelectorAll(".box");
+
+  if(id === "all"){
+    boxes.forEach(b => b.style.display = "block");
+  } else {
+    boxes.forEach(b => b.style.display = "none");
+    document.getElementById(id).style.display = "block";
+  }
+}
+</script>
+
+</body>
 </html>
