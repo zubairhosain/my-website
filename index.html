@@ -3,7 +3,8 @@
 <head>
   <title>Germany Top It</title>
 
-  <link rel="icon" href="Your-paragraph-text.png">
+  <!-- 🔥 Favicon (Tab Logo) -->
+  <link rel="icon" type="image/png" href="Your-paragraph-text.png">
 
   <style>
     body {
@@ -12,29 +13,39 @@
       background: url("4k-new-york.jpg") center/cover no-repeat;
     }
 
+    /* DARK OVERLAY */
     .overlay {
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.65);
       min-height: 100vh;
+      padding: 20px;
       color: white;
       text-align: center;
-      padding: 20px;
     }
 
+    /* LOGO */
     .logo img {
       width: 90px;
+      height: 90px;
       border-radius: 50%;
-      margin-top: 20px;
+      margin-top: 10px;
+      border: 2px solid white;
     }
 
+    /* TITLE */
+    h2 {
+      margin: 10px 0;
+    }
+
+    /* OWNER */
     .name {
-      font-size: 22px;
-      margin-top: 10px;
+      font-size: 18px;
+      margin-bottom: 15px;
     }
 
     /* MAIN BOX */
-    .main-box{
+    .main-box {
       width: 90%;
-      margin: 20px auto;
+      margin: auto;
       border: 3px solid white;
       border-radius: 15px;
       padding: 15px;
@@ -42,7 +53,7 @@
     }
 
     /* MENU */
-    .menu{
+    .menu {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -52,29 +63,35 @@
       margin-bottom: 15px;
     }
 
-    .menu button{
-      padding: 8px 12px;
+    .menu button {
+      padding: 10px 15px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       background: white;
       color: black;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu button:hover {
+      background: #ddd;
     }
 
     /* CONTENT BOX */
-    .box{
+    .box {
       display: none;
       background: white;
       color: black;
       width: 90%;
       margin: 10px auto;
-      padding: 10px;
+      padding: 12px;
       border-radius: 10px;
       text-align: left;
     }
 
-    #home{
+    /* HOME DEFAULT */
+    #home {
       display: block;
     }
   </style>
@@ -86,7 +103,7 @@
 
   <!-- LOGO -->
   <div class="logo">
-    <img src="Your-paragraph-text.png">
+    <img src="Your-paragraph-text.png" alt="logo">
   </div>
 
   <!-- TITLE -->
@@ -102,7 +119,7 @@
 
     <!-- MENU -->
     <div class="menu">
-      <button onclick="home()">Home</button>
+      <button onclick="show('home')">Home</button>
       <button onclick="show('bank')">Bank</button>
       <button onclick="show('crypto')">Crypto</button>
       <button onclick="show('social')">Social</button>
@@ -110,34 +127,29 @@
       <button onclick="show('review')">Review</button>
     </div>
 
-    <!-- HOME -->
+    <!-- CONTENT -->
     <div id="home" class="box">
-      Welcome to Home Page
+      Welcome to Home Page 🚀
     </div>
 
-    <!-- BANK -->
     <div id="bank" class="box">
-      Bank Accounts Content
+      Bank Accounts Section 🏦
     </div>
 
-    <!-- CRYPTO -->
     <div id="crypto" class="box">
-      Crypto Content
+      Crypto Accounts Section 💰
     </div>
 
-    <!-- SOCIAL -->
     <div id="social" class="box">
-      Social Media Content
+      Social Media Accounts 📱
     </div>
 
-    <!-- EMAIL -->
     <div id="email" class="box">
-      Email Accounts Content
+      Email Accounts 📧
     </div>
 
-    <!-- REVIEW -->
     <div id="review" class="box">
-      Review Section
+      User Reviews ⭐
     </div>
 
   </div>
@@ -149,12 +161,6 @@ function show(id){
   let boxes = document.querySelectorAll(".box");
   boxes.forEach(b => b.style.display = "none");
   document.getElementById(id).style.display = "block";
-}
-
-function home(){
-  let boxes = document.querySelectorAll(".box");
-  boxes.forEach(b => b.style.display = "none");
-  document.getElementById("home").style.display = "block";
 }
 </script>
 
