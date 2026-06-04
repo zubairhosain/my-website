@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Germany Top It</title>
 
+<!-- ✅ FAVICON ONLY (Correct way) -->
+<link rel="icon" type="image/png" href="favicon.png">
+
 <style>
 *{
 margin:0;
@@ -18,6 +21,7 @@ background:#000;
 color:white;
 }
 
+/* TOP BAR */
 .top-bar{
 background:#0066cc;
 padding:10px 50px;
@@ -27,13 +31,18 @@ gap:30px;
 font-size:14px;
 }
 
+.top-bar span{
+font-weight:bold;
+}
+
+/* NAVBAR */
 .navbar{
 background:#fff;
 height:85px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:0 60px;
+padding:0 50px;
 }
 
 .logo-area{
@@ -54,9 +63,11 @@ font-size:28px;
 font-weight:bold;
 }
 
+/* MENU */
 .menu{
 display:flex;
 gap:35px;
+margin-right:30px;
 }
 
 .menu a{
@@ -70,6 +81,7 @@ transition:.3s;
 color:#0066cc;
 }
 
+/* HERO */
 .hero{
 height:700px;
 background:
@@ -110,6 +122,7 @@ font-size:18px;
 cursor:pointer;
 }
 
+/* COUNTER */
 .counter{
 margin-top:40px;
 display:flex;
@@ -129,6 +142,7 @@ backdrop-filter:blur(5px);
 font-size:32px;
 }
 
+/* HERO IMAGE */
 .hero-image{
 width:40%;
 text-align:center;
@@ -139,6 +153,7 @@ width:100%;
 max-width:500px;
 }
 
+/* SERVICES */
 .services{
 background:#fff;
 color:#111;
@@ -166,16 +181,15 @@ border:1px solid #ddd;
 border-radius:10px;
 }
 
-.card h3{
-margin-bottom:10px;
-}
-
+/* FOOTER */
 footer{
 background:#111;
 padding:25px;
 text-align:center;
+font-weight:bold;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
 
 .hero{
@@ -213,22 +227,26 @@ padding:20px;
 margin-top:15px;
 flex-wrap:wrap;
 justify-content:center;
+margin-right:0;
 }
 
 }
 </style>
 </head>
+
 <body>
 
+<!-- TOP BAR -->
 <div class="top-bar">
-<span>Telegram: Germany Top It</span>
+<span>Telegram: @GermanyTopIt</span>
 <span>Email: germanytopit@gmail.com</span>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar">
 
 <div class="logo-area">
-<img src="Your-paragraph-text.png" alt="">
+<img src="Your-paragraph-text.png" alt="Logo">
 <h2>Germany Top It</h2>
 </div>
 
@@ -242,6 +260,7 @@ justify-content:center;
 
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 
 <div class="hero-text">
@@ -259,22 +278,22 @@ online account solutions for customers worldwide.
 <div class="counter">
 
 <div class="box">
-<h3 id="days">237</h3>
+<h3>237</h3>
 <p>Days</p>
 </div>
 
 <div class="box">
-<h3 id="hours">01</h3>
+<h3>01</h3>
 <p>Hours</p>
 </div>
 
 <div class="box">
-<h3 id="minutes">48</h3>
+<h3>48</h3>
 <p>Minutes</p>
 </div>
 
 <div class="box">
-<h3 id="seconds">37</h3>
+<h3>37</h3>
 <p>Seconds</p>
 </div>
 
@@ -288,23 +307,9 @@ online account solutions for customers worldwide.
 
 </section>
 
+<!-- SERVICES -->
 <section class="services">
 
 <h2>Our Services</h2>
 
 <div class="service-grid">
-
-<div class="card">
-<h3>Bank Accounts</h3>
-<p>Verified banking solutions.</p>
-</div>
-
-<div class="card">
-<h3>Crypto Accounts</h3>
-<p>Trusted crypto account services.</p>
-</div>
-
-<div class="card">
-<h3>Social Accounts</h3>
-<p>High-quality social media accounts.</p>
-</div>
