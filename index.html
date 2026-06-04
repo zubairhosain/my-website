@@ -20,14 +20,20 @@ background:#000;
 color:#fff;
 }
 
-/* TOP BAR (LEFT SIDE FIX) */
+/* TOP BAR (RIGHT SIDE BUT NOT CORNER) */
 .top-bar{
 background:#0066cc;
 display:flex;
-justify-content:flex-start; /* 👉 LEFT SIDE */
+justify-content:flex-end;
 gap:25px;
-padding:10px 40px;
+padding:12px 80px; /* 👉 more space from edges */
 font-size:14px;
+}
+
+/* MAIN WRAPPER (GIVES SIDE SPACE) */
+.container{
+max-width:1200px;
+margin:auto;
 }
 
 /* NAVBAR */
@@ -36,15 +42,14 @@ background:#fff;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:12px 60px;
+padding:12px 80px; /* 👉 more side gap */
 }
 
-/* LOGO (MORE RIGHT) */
+/* LOGO */
 .logo-area{
 display:flex;
 align-items:center;
 gap:12px;
-margin-left:60px; /* 👉 আরও ডানদিকে */
 }
 
 .logo-area img{
@@ -59,11 +64,10 @@ font-size:24px;
 font-weight:bold;
 }
 
-/* MENU (MORE LEFT) */
+/* MENU */
 .menu{
 display:flex;
 gap:25px;
-margin-right:80px; /* 👉 আরও বামদিকে */
 }
 
 .menu a{
@@ -76,29 +80,47 @@ font-weight:600;
 color:#0066cc;
 }
 
-/* HERO (FULL BACKGROUND FIX) */
+/* HERO WITH BLUE WATERMARK OVERLAY */
 .hero{
-min-height:100vh; /* 👉 FULL SCREEN FIX */
-background:
-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-url('4k-new-york.jpg') center/cover no-repeat;
+min-height:100vh;
+position:relative;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 padding:60px 20px;
+
+/* image */
+background:url('4k-new-york.jpg') center/cover no-repeat;
+}
+
+/* BLUE OVERLAY */
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0, 80, 180, 0.55); /* 👉 blue watermark */
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:800px;
 }
 
 .hero h1{
 font-size:55px;
 margin-bottom:15px;
+color:#fff;
 }
 
 .hero p{
-max-width:700px;
-margin:auto;
 font-size:18px;
 margin-bottom:20px;
+color:#fff;
 }
 
 .btn{
@@ -116,22 +138,22 @@ cursor:pointer;
 .navbar{
 flex-direction:column;
 gap:15px;
+padding:15px 20px;
 }
 
 .menu{
 flex-wrap:wrap;
 justify-content:center;
-margin-right:0;
 }
 
-.logo-area{
-margin-left:0;
+.top-bar{
+justify-content:center;
+padding:10px 20px;
 }
 
 .hero h1{
 font-size:35px;
 }
-
 }
 </style>
 </head>
@@ -145,7 +167,7 @@ font-size:35px;
 </div>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav class="navbar container">
 
 <div class="logo-area">
 <img src="Your-paragraph-text.png" alt="">
@@ -164,9 +186,9 @@ font-size:35px;
 
 <!-- HERO -->
 <section class="hero">
-<div>
+<div class="hero-content">
 <h1>Welcome To Germany Top It</h1>
-<p>Secure digital services worldwide with trusted support.</p>
+<p>Secure digital services worldwide with trusted support and verified accounts.</p>
 <button class="btn">VISIT SHOP</button>
 </div>
 </section>
