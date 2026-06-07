@@ -106,30 +106,27 @@ font-weight:600;
 padding:10px;
 }
 
-.menu a:hover{
-color:#0066cc;
-}
-
-/* =========================
-   FIXED DROPDOWN (CLEAN)
-========================= */
+/* ================= DROPDOWN FIX ================= */
 
 .dropdown{
 position:relative;
 display:inline-block;
 }
 
+/* main link */
 .dropdown > a{
 display:block;
 padding:10px;
 }
 
-/* BOX */
+/* dropdown box */
 .dropdown-content{
 display:none;
 position:absolute;
-top:calc(100% + 20px);
+top:100%;   /* 🔥 FIXED (important) */
 left:0;
+
+margin-top:10px; /* gap without breaking hover */
 
 background:#fff;
 min-width:280px;
@@ -142,7 +139,7 @@ box-shadow:none;
 z-index:99999;
 }
 
-/* ITEMS */
+/* items */
 .dropdown-content a{
 display:block;
 padding:10px;
@@ -152,12 +149,11 @@ border-bottom:1px solid #ddd;
 background:#fff;
 }
 
-/* hover */
 .dropdown-content a:hover{
 background:#f5f5f5;
 }
 
-/* FIX: keep open */
+/* KEEP OPEN */
 .dropdown:hover .dropdown-content{
 display:block;
 }
