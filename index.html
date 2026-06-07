@@ -91,19 +91,19 @@ position:relative;
 display:inline-block;
 }
 
-/* MAIN LINK */
 .dropdown > a{
 display:block;
 padding:10px;
 }
 
-/* 🔥 PERFECT DROPDOWN FIX (ATTACHED + SMALL GAP + NO CUT) */
+/* 🔥 MORE LOWER BORDER + GAP */
 .dropdown-content{
 display:none;
 position:absolute;
 
-/* white bar se small gap */
-top:calc(100% + 4px);
+/* 👇 MORE GAP (lower than before) */
+top:calc(100% + 10px);
+
 left:0;
 
 background:#fff;
@@ -125,7 +125,6 @@ padding:10px 12px;
 color:#000;
 font-size:14px;
 border-bottom:1px solid #eee;
-transition:0.2s;
 }
 
 /* hover */
@@ -133,7 +132,7 @@ transition:0.2s;
 background:#f2f2f2;
 }
 
-/* 🔥 IMPORTANT: NO DISAPPEAR ISSUE FIX */
+/* keep stable hover */
 .dropdown:hover .dropdown-content,
 .dropdown-content:hover{
 display:block;
@@ -152,7 +151,7 @@ height:auto;
 cursor:pointer;
 }
 
-/* CART BADGE */
+/* 🔥 RED CART BADGE */
 .cart-count{
 position:absolute;
 top:-6px;
@@ -168,10 +167,9 @@ justify-content:center;
 font-size:12px;
 font-weight:bold;
 
-color:#0066cc;
-border:2px solid #0066cc;
+color:#fff;
+background:red;   /* 🔥 changed to red */
 border-radius:50%;
-background:#fff;
 }
 
 /* HERO */
@@ -271,7 +269,6 @@ font-size:35px;
 
 <a href="#">Home</a>
 
-<!-- BANK -->
 <div class="dropdown">
     <a href="#">Bank Accounts ⌵</a>
     <div class="dropdown-content">
@@ -281,7 +278,6 @@ font-size:35px;
     </div>
 </div>
 
-<!-- CRYPTO -->
 <div class="dropdown">
     <a href="#">Crypto Accounts ⌵</a>
     <div class="dropdown-content">
@@ -291,7 +287,6 @@ font-size:35px;
     </div>
 </div>
 
-<!-- SOCIAL -->
 <div class="dropdown">
     <a href="#">Social Accounts ⌵</a>
     <div class="dropdown-content">
@@ -303,7 +298,6 @@ font-size:35px;
 
 <a href="#">Shop</a>
 
-<!-- CART -->
 <div class="cart">
     <img src="add-to-cart.png" alt="Cart">
     <span class="cart-count">0</span>
@@ -317,7 +311,7 @@ font-size:35px;
 <section class="hero">
 <div class="hero-content">
 <h1>Welcome To Global Top It</h1>
-<p>Secure digital services worldwide with trusted support and verified accounts.</p>
+<p>Secure digital services worldwide with trusted support.</p>
 <button class="btn">VISIT SHOP</button>
 </div>
 </section>
