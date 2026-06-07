@@ -20,22 +20,18 @@ background:#fff;
 color:#000;
 }
 
-/* TOP BAR (RIGHT SIDE BUT NOT CORNER) */
+/* TOP BAR */
 .top-bar{
 background:#0066cc;
 display:flex;
-justify-content:flex-end;
-gap:25px;
-padding:20px 250px;
-font-size:16px;
-}
-  
-.top-bar span{
-color:#fff;
-font-weight:700;
+justify-content:space-between;
+align-items:center;
+padding:15px 250px;
+font-size:15px;
+color:white;
 }
 
-/* MAIN WRAPPER */
+/* CONTAINER */
 .container{
 max-width:1200px;
 margin:auto;
@@ -73,7 +69,7 @@ margin:0;
 /* MENU */
 .menu{
 display:flex;
-gap:25px;
+gap:20px;
 align-items:center;
 }
 
@@ -87,7 +83,38 @@ font-weight:600;
 color:#0066cc;
 }
 
-/* CART ICON */
+/* DROPDOWN */
+.dropdown{
+position:relative;
+display:inline-block;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+top:25px;
+background:#fff;
+min-width:160px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+z-index:10;
+}
+
+.dropdown-content a{
+display:block;
+padding:10px;
+color:#000;
+font-size:14px;
+}
+
+.dropdown-content a:hover{
+background:#f2f2f2;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* CART */
 .cart img{
 width:35px;
 height:auto;
@@ -158,8 +185,10 @@ justify-content:center;
 }
 
 .top-bar{
-justify-content:center;
+flex-direction:column;
+gap:10px;
 padding:10px 20px;
+text-align:center;
 }
 
 .hero h1{
@@ -172,16 +201,9 @@ font-size:35px;
 <body>
 
 <!-- TOP BAR -->
-<div style="background:#0066cc; color:white; display:flex; justify-content:space-between; align-items:center; padding:15px 250px; font-size:15px;">
-
-    <div>
-        Trusted Global Service with Verified USA Accounts
-    </div>
-
-    <div style="display:flex; gap:20px; align-items:center;">
-        <a href="https://t.me/smmpvaexpertts" target="_blank" style="color:white; text-decoration:none;">@GlobalTopIt</a>
-        <span>Globaltopit@gmail.com</span>
-    </div>
+<div class="top-bar">
+    <div>Trusted Global Service with Verified USA Accounts</div>
+    <div>@GlobalTopIt | Globaltopit@gmail.com</div>
 </div>
 
 <!-- NAVBAR -->
@@ -193,13 +215,42 @@ font-size:35px;
 </div>
 
 <div class="menu">
+
 <a href="#">Home</a>
-<a href="#">Bank Accounts ⌵</a>
-<a href="#">Crypto Accounts ⌵</a>
-<a href="#">Social Accounts ⌵</a>
+
+<!-- BANK -->
+<div class="dropdown">
+    <a href="#">Bank Accounts ⌵</a>
+    <div class="dropdown-content">
+        <a href="bank.html">USA Bank</a>
+        <a href="bank.html">UK Bank</a>
+        <a href="bank.html">Verified Accounts</a>
+    </div>
+</div>
+
+<!-- CRYPTO -->
+<div class="dropdown">
+    <a href="#">Crypto Accounts ⌵</a>
+    <div class="dropdown-content">
+        <a href="crypto.html">Binance</a>
+        <a href="crypto.html">Coinbase</a>
+        <a href="crypto.html">Wallets</a>
+    </div>
+</div>
+
+<!-- SOCIAL -->
+<div class="dropdown">
+    <a href="#">Social Accounts ⌵</a>
+    <div class="dropdown-content">
+        <a href="social.html">TikTok</a>
+        <a href="social.html">Facebook</a>
+        <a href="social.html">Instagram</a>
+    </div>
+</div>
+
 <a href="#">Shop</a>
 
-<!-- 🔥 ONLY CART ADDED HERE -->
+<!-- CART -->
 <div class="cart">
     <img src="add-to-cart.png" alt="Cart">
 </div>
