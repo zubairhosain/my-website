@@ -77,39 +77,56 @@ align-items:center;
 text-decoration:none;
 color:#111;
 font-weight:600;
+padding:10px;
 }
 
 .menu a:hover{
 color:#0066cc;
 }
 
-/* DROPDOWN */
+/* DROPDOWN (FIXED PRO STYLE) */
 .dropdown{
 position:relative;
 display:inline-block;
 }
 
+/* MAIN LINK */
+.dropdown > a{
+display:block;
+padding:10px;
+}
+
+/* DROPDOWN BOX */
 .dropdown-content{
 display:none;
 position:absolute;
-top:25px;
+top:100%;
+left:0;
+
 background:#fff;
-min-width:160px;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-z-index:10;
+min-width:200px;
+
+border:1px solid #ddd;
+border-radius:6px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+z-index:999;
 }
 
+/* LINKS */
 .dropdown-content a{
 display:block;
-padding:10px;
+padding:10px 12px;
 color:#000;
 font-size:14px;
+border-bottom:1px solid #f1f1f1;
 }
 
 .dropdown-content a:hover{
-background:#f2f2f2;
+background:#f5f5f5;
 }
 
+/* SHOW ON HOVER */
 .dropdown:hover .dropdown-content{
 display:block;
 }
@@ -282,11 +299,12 @@ font-size:35px;
 </div>
 
 </nav>
+
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
 <h1>Welcome To Global Top It</h1>
-<p>Secure digital services worldwide with trusted support and verified accounts.</p>
+<p>Secure digital services worldwide with trusted support.</p>
 <button class="btn">VISIT SHOP</button>
 </div>
 </section>
