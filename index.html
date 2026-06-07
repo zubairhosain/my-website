@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Global Top It</title>
 
+<!-- ✅ FAVICON FIX -->
+<link rel="icon" href="Your-paragraph-text.png">
+
 <style>
 *{
 margin:0;
@@ -17,13 +20,13 @@ body{
 background:#fff;
 }
 
-/* TOP BAR */
+/* ================= TOP BAR ================= */
 .top-bar{
 background:#0066cc;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 200px;
+padding:15px 200px;
 color:white;
 font-size:15px;
 }
@@ -36,28 +39,38 @@ font-size:16px;
 .top-right{
 display:flex;
 gap:20px;
+align-items:center;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:12px 20px;
 background:#fff;
-border:5px solid white;
+border-bottom:2px solid #eee;
 }
 
+/* LOGO FIX (LEFT SIDE) */
 .logo-area{
 display:flex;
-gap:10px;
 align-items:center;
+gap:10px;
 }
 
 .logo-area img{
-width:45px;
+width:50px;
+height:50px;
 }
 
+.logo-area h2{
+font-size:24px;
+font-weight:600;
+color:#000;
+}
+
+/* MENU */
 .menu{
 display:flex;
 gap:20px;
@@ -72,18 +85,11 @@ padding:10px;
 }
 
 /* ================= DROPDOWN FIX ================= */
-
 .dropdown{
 position:relative;
 display:inline-block;
 }
 
-.dropdown > a{
-display:block;
-padding:10px;
-}
-
-/* MAIN BOX */
 .dropdown-content{
 display:none;
 position:absolute;
@@ -91,35 +97,34 @@ top:100%;
 left:0;
 margin-top:10px;
 
-min-width:250px;
+min-width:260px;
 background:#fff;
-
 border:1px solid #ddd;
 z-index:9999;
 }
 
-/* REMOVE LINES PROBLEM */
 .dropdown-content a{
 display:block;
-padding:10px;
+padding:12px 14px;
 text-decoration:none;
 color:#000;
-border-bottom:none;   /* 🔥 removed lines */
+font-size:16px;
+border-bottom:none;
 }
 
-/* hover */
 .dropdown-content a:hover{
 background:#f2f2f2;
 }
 
-/* KEEP OPEN SAFE */
 .dropdown:hover .dropdown-content{
 display:block;
 }
 
-/* CART */
+/* ================= CART ================= */
 .cart{
 position:relative;
+display:flex;
+align-items:center;
 }
 
 .cart img{
@@ -128,42 +133,72 @@ width:35px;
 
 .cart-count{
 position:absolute;
-top:-5px;
-right:-8px;
+top:-6px;
+right:-10px;
+width:20px;
+height:20px;
 background:red;
 color:#fff;
-width:18px;
-height:18px;
-border-radius:50%;
 font-size:12px;
 display:flex;
 align-items:center;
 justify-content:center;
+border-radius:50%;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
 height:90vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:#eee;
+
+/* ✅ BACKGROUND FIX */
+background:url('4k-new-york.jpg') center/cover no-repeat;
+position:relative;
 }
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:#fff;
+}
+
+.hero h1{
+font-size:50px;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-caption">GLOBAL SECURE USA & DIGITAL SERVICES</div>
-    <div class="top-right">@GlobalTopIt | globaltopit@gmail.com</div>
+
+    <div class="top-right">
+        @GlobalTopIt | globaltopit@gmail.com
+    </div>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar">
 
+<!-- LOGO FIX -->
 <div class="logo-area">
-<img src="logo.png">
+<img src="Your-paragraph-text.png" alt="logo">
 <h2>GLOBAL TOP IT</h2>
 </div>
 
@@ -201,16 +236,20 @@ background:#eee;
 <a href="#">Shop</a>
 
 <div class="cart">
-🛒 <span class="cart-count">0</span>
+    <img src="add-to-cart.png">
+    <span class="cart-count">0</span>
 </div>
 
 </div>
 
 </nav>
 
-<div class="hero">
-<h1>Welcome To Global Top It</h1>
-</div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome To Global Top It</h1>
+    </div>
+</section>
 
 </body>
 </html>
