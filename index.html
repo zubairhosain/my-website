@@ -36,7 +36,6 @@ border-bottom:none;
 .top-caption{
 font-size:17px;
 font-weight:700;
-letter-spacing:0.3px;
 }
 
 /* RIGHT SIDE */
@@ -46,7 +45,6 @@ align-items:center;
 gap:25px;
 }
 
-/* ITEM */
 .top-item{
 display:flex;
 align-items:center;
@@ -113,34 +111,31 @@ position:relative;
 display:inline-block;
 }
 
-/* main link */
 .dropdown > a{
 display:block;
 padding:10px;
 }
 
-/* dropdown box */
+/* MAIN BOX */
 .dropdown-content{
 display:none;
 position:absolute;
-top:100%;   /* 🔥 FIXED (important) */
+top:100%;
 left:0;
 
-margin-top:10px; /* gap without breaking hover */
+padding-top:10px; /* 🔥 invisible hover bridge */
 
-background:#fff;
 min-width:280px;
-
-border:1px solid #ddd;
-border-radius:0;
-
-box-shadow:none;
-
 z-index:99999;
 }
 
-/* items */
-.dropdown-content a{
+/* REAL BOX INSIDE */
+.dropdown-content-inner{
+background:#fff;
+border:1px solid #ddd;
+}
+
+.dropdown-content-inner a{
 display:block;
 padding:10px;
 color:#000;
@@ -149,7 +144,7 @@ border-bottom:1px solid #ddd;
 background:#fff;
 }
 
-.dropdown-content a:hover{
+.dropdown-content-inner a:hover{
 background:#f5f5f5;
 }
 
@@ -242,7 +237,6 @@ cursor:pointer;
 
 /* RESPONSIVE */
 @media(max-width:768px){
-
 .navbar{
 flex-direction:column;
 gap:15px;
@@ -275,19 +269,8 @@ text-align:center;
 
     <div class="top-right">
 
-        <a class="top-item" href="https://t.me/smmpvaexpertts" target="_blank">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-                <path d="M9.04 16.47l-.39 5.52c.56 0 .8-.24 1.1-.54l2.6-2.5 5.4 3.97c.99.55 1.7.26 1.95-.92l3.55-16.7c.31-1.44-.52-2.01-1.48-1.65L1.4 9.5c-1.38.54-1.36 1.3-.24 1.65l5.6 1.75 12.98-8.17c.61-.38 1.17-.17.71.21z"/>
-            </svg>
-            @GlobalTopIt
-        </a>
-
-        <div class="top-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            Globaltopit@gmail.com
-        </div>
+        <a class="top-item" href="https://t.me/smmpvaexpertts" target="_blank">📩 @GlobalTopIt</a>
+        <div class="top-item">📧 Globaltopit@gmail.com</div>
 
     </div>
 
@@ -308,27 +291,33 @@ text-align:center;
 <div class="dropdown">
     <a href="#">Bank Accounts ⌵</a>
     <div class="dropdown-content">
-        <a href="bank.html">USA Bank</a>
-        <a href="bank.html">UK Bank</a>
-        <a href="bank.html">Verified Accounts</a>
+        <div class="dropdown-content-inner">
+            <a href="bank.html">USA Bank</a>
+            <a href="bank.html">UK Bank</a>
+            <a href="bank.html">Verified Accounts</a>
+        </div>
     </div>
 </div>
 
 <div class="dropdown">
     <a href="#">Crypto Accounts ⌵</a>
     <div class="dropdown-content">
-        <a href="crypto.html">Binance</a>
-        <a href="crypto.html">Coinbase</a>
-        <a href="crypto.html">Wallets</a>
+        <div class="dropdown-content-inner">
+            <a href="crypto.html">Binance</a>
+            <a href="crypto.html">Coinbase</a>
+            <a href="crypto.html">Wallets</a>
+        </div>
     </div>
 </div>
 
 <div class="dropdown">
     <a href="#">Social Accounts ⌵</a>
     <div class="dropdown-content">
-        <a href="social.html">TikTok</a>
-        <a href="social.html">Facebook</a>
-        <a href="social.html">Instagram</a>
+        <div class="dropdown-content-inner">
+            <a href="social.html">TikTok</a>
+            <a href="social.html">Facebook</a>
+            <a href="social.html">Instagram</a>
+        </div>
     </div>
 </div>
 
