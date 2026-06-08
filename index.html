@@ -52,15 +52,20 @@ font-size:14px;
 text-decoration:none;
 }
 
-/* NAVBAR (white border smaller) */
+/* CONTAINER */
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+/* NAVBAR */
 .navbar{
 background:#fff;
 display:flex;
 align-items:center;
 justify-content:space-between;
 padding:12px 10px;
-
-border:3px solid white;  /* FIXED */
+border:6px solid white;
 position:relative;
 }
 
@@ -89,12 +94,16 @@ gap:20px;
 align-items:center;
 }
 
-/* ALL MENU NORMAL */
+/* FIX: ALL MENU NORMAL */
 .menu a{
 text-decoration:none;
 color:#111;
 font-weight:400 !important;
 padding:10px;
+}
+
+.menu a:visited{
+font-weight:400 !important;
 }
 
 .menu a:hover{
