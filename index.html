@@ -128,23 +128,33 @@ font-weight:400;
 }
 
 /* DROPDOWN BOX */
+.dropdown{
+position:relative;
+display:inline-block;
+}
+
 .dropdown-content{
 display:none;
 position:absolute;
-top:calc(100% + 20px);
+top:100%;
 left:0;
 
 background:#fff;
 min-width:260px;
-border:1px solid #ddd;
 
-box-shadow:0 10px 20px rgba(0,0,0,0.12);
-z-index:9999;
-overflow:hidden;
+border:1px solid #ddd;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+
+z-index:99999;
+
+/* IMPORTANT FIX */
+margin-top:0;
+transform:none;
 }
 
 .dropdown:hover .dropdown-content{
 display:block;
+}
 }
 
 /* 🔥 NORMAL TEXT SIZE (FIXED) */
